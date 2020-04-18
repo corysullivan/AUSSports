@@ -42,7 +42,7 @@ public class AUSAPI {
 
     private func loadGameResults(from document: Document) throws -> [GameResult] {
         let results = try document.select("tr").filter { element in
-            if /* element.hasClass("odd") || */ element.hasClass("even") {
+            if element.hasClass("odd") || element.hasClass("even") {
                 return try element.getElementsByIndexEquals(0).hasClass(Constants.date)
             } else {
                 return false
@@ -66,9 +66,9 @@ public class AUSAPI {
         }
         guard let homeTeam = Team(rawValue: homeTeamName) else { return nil }
 
-        let dateText = try element.getElementsByClass(Constants.date).text()
+        let dateText = try element.getElementsByClass(Constants.date).text().dropFirst(4)
 
-        if let date = dateFormatter.date(from: dateText) {
+        if let date = dateFormatter.date(from: String(dateText)) {
             lastDate = date
         }
 

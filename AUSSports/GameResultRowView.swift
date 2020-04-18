@@ -19,16 +19,27 @@ struct GameResultRowView: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            HStack {
-                Text(viewModel.homeTeamName)
-                Spacer()
-                Text(viewModel.homeScore)
-            }
-            HStack {
-                Text(viewModel.awayTeamName)
-                Spacer()
-                Text(viewModel.awayScore)
+        NavigationLink(destination: BoxScoreView.init(viewModel: viewModel)) {
+            VStack(alignment: .leading, spacing: 10) {
+                Text("\(viewModel.month) \(viewModel.day)").font(.caption)
+                HStack {
+                    Image(viewModel.homeLogo)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 20, height: 20, alignment: .center)
+                    Text(viewModel.homeTeamName).font(.headline)
+                    Spacer()
+                    Text(viewModel.homeScore).font(.body)
+                }
+                HStack {
+                    Image(viewModel.awayLogo)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 20, height: 20, alignment: .center)
+                    Text(viewModel.awayTeamName).font(.headline)
+                    Spacer()
+                    Text(viewModel.awayScore).font(.body)
+                }
             }
         }.padding(10)
     }
@@ -44,3 +55,15 @@ struct GameResultRow_Previews: PreviewProvider {
     }
 }
 
+struct BoxScoreView: View {
+    
+    private let viewModel: GameResultRowViewModel
+
+    init(viewModel: GameResultRowViewModel) {
+        self.viewModel = viewModel
+    }
+    
+    var body: some View {
+        Text(viewModel.awayTeamName)
+    }
+}

@@ -10,7 +10,7 @@ import Foundation
 
 let dayFormatter: DateFormatter = {
   let formatter = DateFormatter()
-  formatter.dateFormat = "dd"
+  formatter.dateFormat = "d"
   return formatter
 }()
 

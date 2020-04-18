@@ -13,7 +13,7 @@ import SwiftUI
 struct GameResultRowViewModel: Identifiable {
     
     var id: String {
-        return homeTeamName + awayTeamName + month + day
+        return homeTeamName + awayTeamName + homeScore + awayScore
     }
     
     var homeScore: String {
@@ -38,6 +38,14 @@ struct GameResultRowViewModel: Identifiable {
         return game.awayTeam.rawValue
     }
     
+    var homeLogo: String {
+        return game.homeTeam.logoName
+    }
+    
+    var awayLogo: String {
+        return game.awayTeam.logoName
+    }
+    
     var month: String {
         return monthFormatter.string(from: game.date)
     }
@@ -50,5 +58,18 @@ struct GameResultRowViewModel: Identifiable {
     
     init(game: GameResult) {
         self.game = game
+    }
+}
+
+extension Team {
+    var logoName: String {
+        switch self {
+        case .stfx:
+            return "stfx_logo"
+        case .saintMarys:
+            return "smu_logo"
+        default:
+            return "logo_placeholder"
+        }
     }
 }
