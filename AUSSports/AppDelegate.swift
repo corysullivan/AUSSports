@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AUSAPI
+import AUS_API
 import Combine
 
 @UIApplicationMain

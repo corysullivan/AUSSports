@@ -8,7 +8,7 @@
 
 import Foundation
 import Combine
-import AUSAPI
+import AUS_API
 
 class GameResultViewModel: ObservableObject, Identifiable {
     

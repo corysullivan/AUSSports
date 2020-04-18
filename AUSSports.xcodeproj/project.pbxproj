@@ -12,13 +12,12 @@
 		343139792442559200FAA7CF /* GameResultRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343139782442559200FAA7CF /* GameResultRowViewModel.swift */; };
 		3431397B2442591600FAA7CF /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3431397A2442591600FAA7CF /* Formatters.swift */; };
 		3431397D24425E3000FAA7CF /* GameResultRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3431397C24425E3000FAA7CF /* GameResultRowView.swift */; };
+		34946A67244B8DE800DAB291 /* AUS-API in Frameworks */ = {isa = PBXBuildFile; productRef = 34946A66244B8DE800DAB291 /* AUS-API */; };
 		3499B9242440DD270013E349 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499B9232440DD270013E349 /* AppDelegate.swift */; };
 		3499B9262440DD270013E349 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499B9252440DD270013E349 /* SceneDelegate.swift */; };
 		3499B92A2440DD290013E349 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3499B9292440DD290013E349 /* Assets.xcassets */; };
 		3499B92D2440DD290013E349 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3499B92C2440DD290013E349 /* Preview Assets.xcassets */; };
 		3499B9302440DD290013E349 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3499B92E2440DD290013E349 /* LaunchScreen.storyboard */; };
-		3499B9392440DE280013E349 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 3499B9382440DE280013E349 /* SwiftSoup */; };
-		34BD43DC2442344000B56595 /* AUSAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 34BD43DB2442344000B56595 /* AUSAPI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +26,7 @@
 		343139782442559200FAA7CF /* GameResultRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultRowViewModel.swift; sourceTree = "<group>"; };
 		3431397A2442591600FAA7CF /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		3431397C24425E3000FAA7CF /* GameResultRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultRowView.swift; sourceTree = "<group>"; };
+		34946A65244B8DA000DAB291 /* AUS-API */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "AUS-API"; sourceTree = "<group>"; };
 		3499B9202440DD270013E349 /* AUSSports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AUSSports.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3499B9232440DD270013E349 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3499B9252440DD270013E349 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,7 +34,6 @@
 		3499B92C2440DD290013E349 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3499B92F2440DD290013E349 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3499B9312440DD290013E349 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		34BD43D92442337300B56595 /* AUSAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AUSAPI; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,8 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3499B9392440DE280013E349 /* SwiftSoup in Frameworks */,
-				34BD43DC2442344000B56595 /* AUSAPI in Frameworks */,
+				34946A67244B8DE800DAB291 /* AUS-API in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +68,7 @@
 		3499B9222440DD270013E349 /* AUSSports */ = {
 			isa = PBXGroup;
 			children = (
-				34BD43D92442337300B56595 /* AUSAPI */,
+				34946A65244B8DA000DAB291 /* AUS-API */,
 				3499B9232440DD270013E349 /* AppDelegate.swift */,
 				3499B9252440DD270013E349 /* SceneDelegate.swift */,
 				3431397424423DEC00FAA7CF /* GameResultViewModel.swift */,
@@ -118,8 +116,7 @@
 			);
 			name = AUSSports;
 			packageProductDependencies = (
-				3499B9382440DE280013E349 /* SwiftSoup */,
-				34BD43DB2442344000B56595 /* AUSAPI */,
+				34946A66244B8DE800DAB291 /* AUS-API */,
 			);
 			productName = AUSSports;
 			productReference = 3499B9202440DD270013E349 /* AUSSports.app */;
@@ -150,7 +147,6 @@
 			);
 			mainGroup = 3499B9172440DD270013E349;
 			packageReferences = (
-				3499B9372440DE280013E349 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 			);
 			productRefGroup = 3499B9212440DD270013E349 /* Products */;
 			projectDirPath = "";
@@ -380,26 +376,10 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		3499B9372440DE280013E349 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/scinfu/SwiftSoup";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.3.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		3499B9382440DE280013E349 /* SwiftSoup */ = {
+		34946A66244B8DE800DAB291 /* AUS-API */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3499B9372440DE280013E349 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
-			productName = SwiftSoup;
-		};
-		34BD43DB2442344000B56595 /* AUSAPI */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = AUSAPI;
+			productName = "AUS-API";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

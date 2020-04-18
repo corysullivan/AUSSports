@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import AUSAPI
+import AUS_API
 import SwiftUI
 
 struct GameResultRowViewModel: Identifiable {

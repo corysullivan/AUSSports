@@ -8,7 +8,7 @@
 
 import Foundation
 import SwiftUI
-import AUSAPI
+import AUS_API
 
 struct GameResultView: View {
     
