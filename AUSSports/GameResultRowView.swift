@@ -6,20 +6,19 @@
 //  Copyright © 2020 Solbits. All rights reserved.
 //
 
+import AUS_API
 import Foundation
 import SwiftUI
-import AUS_API
 
 struct GameResultRowView: View {
-    
     private let viewModel: GameResultRowViewModel
-    
+
     init(viewModel: GameResultRowViewModel) {
         self.viewModel = viewModel
     }
-    
+
     var body: some View {
-        NavigationLink(destination: BoxScoreView.init(viewModel: viewModel)) {
+        NavigationLink(destination: BoxScoreView(viewModel: viewModel)) {
             VStack(alignment: .leading, spacing: 10) {
                 Text("\(viewModel.month) \(viewModel.day)").font(.caption)
                 HStack {
@@ -50,19 +49,18 @@ struct GameResultRow_Previews: PreviewProvider {
         let game = GameResult(withScore: true)
         let viewModel = GameResultRowViewModel(game: game)
         return List {
-          GameResultRowView(viewModel: viewModel)
+            GameResultRowView(viewModel: viewModel)
         }
     }
 }
 
 struct BoxScoreView: View {
-    
     private let viewModel: GameResultRowViewModel
 
     init(viewModel: GameResultRowViewModel) {
         self.viewModel = viewModel
     }
-    
+
     var body: some View {
         Text(viewModel.awayTeamName)
     }

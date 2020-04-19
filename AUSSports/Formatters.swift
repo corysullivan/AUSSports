@@ -9,13 +9,13 @@
 import Foundation
 
 let dayFormatter: DateFormatter = {
-  let formatter = DateFormatter()
-  formatter.dateFormat = "d"
-  return formatter
+    let formatter = DateFormatter()
+    formatter.dateFormat = "d"
+    return formatter
 }()
 
 let monthFormatter: DateFormatter = {
-  let formatter = DateFormatter()
-  formatter.dateFormat = "MMMM"
-  return formatter
+    let formatter = DateFormatter()
+    formatter.dateFormat = "MMMM"
+    return formatter
 }()

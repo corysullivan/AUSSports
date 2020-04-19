@@ -1,5 +1,5 @@
-import XCTest
 @testable import AUS_API
+import XCTest
 
 final class AUS_APITests: XCTestCase {
     func testExample() {

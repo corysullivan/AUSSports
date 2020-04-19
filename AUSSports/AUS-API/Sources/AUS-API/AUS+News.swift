@@ -23,14 +23,14 @@ extension AUSAPI {
             }
 
             switch completionResult {
-            case .success(let feed):
+            case let .success(feed):
                 guard let newsItems = feed.rssFeed?.items else {
                     completion(.success([]))
                     return
                 }
                 let news = newsItems.compactMap(self.newsItem)
                 completion(.success(news))
-            case .failure(let error):
+            case let .failure(error):
                 completion(.failure(.parsingError(underlyingError: error)))
             }
         }

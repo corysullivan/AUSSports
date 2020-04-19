@@ -14,9 +14,9 @@ extension AUSAPI {
             Future<[GameResult], Error> { promise in
                 self.fetchSchedule(with: options) { result in
                     switch result {
-                    case .success(let gameResults):
+                    case let .success(gameResults):
                         return promise(.success(gameResults))
-                    case .failure(let error):
+                    case let .failure(error):
                         return promise(.failure(error))
                     }
                 }
@@ -29,9 +29,9 @@ extension AUSAPI {
             Future<[News], AUSNetworkError> { promise in
                 self.fetchNews(for: sport) { result in
                     switch result {
-                    case .success(let news):
+                    case let .success(news):
                         return promise(.success(news))
-                    case .failure(let error):
+                    case let .failure(error):
                         return promise(.failure(error))
                     }
                 }

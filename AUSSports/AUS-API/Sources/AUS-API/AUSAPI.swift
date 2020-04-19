@@ -18,10 +18,10 @@ public class AUSAPI {
         dateFormatter.dateFormat = "MMMM d"
         return dateFormatter
     }()
-    
+
     public static let shared = AUSAPI()
-    
-    public func fetchSchedule(with options: ScheduleOptions = .stfx, completion: @escaping (Result<[GameResult], Error>) -> Void) {
+
+    public func fetchSchedule(with _: ScheduleOptions = .stfx, completion: @escaping (Result<[GameResult], Error>) -> Void) {
         guard let url = URL(string: "https://www.atlanticuniversitysport.com/sports/mbkb/2019-20/schedule?confonly=1") else { return }
         queue.async {
             do {
@@ -85,7 +85,8 @@ public class AUSAPI {
             awayTeam: awayTeam,
             homeScore: homeResult,
             awayScore: awayResult,
-            status: .final)
+            status: .final
+        )
     }
 }
 

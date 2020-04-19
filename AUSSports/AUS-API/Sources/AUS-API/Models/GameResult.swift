@@ -16,12 +16,12 @@ public enum GameStatus {
 }
 
 public extension GameResult {
-     init(withScore: Bool) {
-        self.awayTeam = Team.acadia
-        self.awayScore = withScore ? 10 : nil
-        self.homeTeam = Team.stfx
-        self.homeScore = withScore ? 20 : nil
-        self.date = Date()
-        self.status = .final
+    init(withScore: Bool) {
+        awayTeam = Team.acadia
+        awayScore = withScore ? 10 : nil
+        homeTeam = Team.stfx
+        homeScore = withScore ? 20 : nil
+        date = Date()
+        status = .final
     }
 }
