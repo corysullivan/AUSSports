@@ -1,3 +1,4 @@
 # AUS-API
 
-A description of this package.
+- HTML Scraping from https://aus.prestosports.com/landing/index
+- RSS news reader

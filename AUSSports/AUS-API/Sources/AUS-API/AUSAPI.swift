@@ -11,7 +11,7 @@ struct Constants {
 }
 
 public class AUSAPI {
-    private let queue = DispatchQueue(label: "com.solbits.queue", attributes: .concurrent)
+    let queue = DispatchQueue(label: "com.solbits.queue", attributes: .concurrent)
 
     private let dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
@@ -20,6 +20,7 @@ public class AUSAPI {
     }()
     
     public static let shared = AUSAPI()
+    
     public func fetchSchedule(with options: ScheduleOptions = .stfx, completion: @escaping (Result<[GameResult], Error>) -> Void) {
         guard let url = URL(string: "https://www.atlanticuniversitysport.com/sports/mbkb/2019-20/schedule?confonly=1") else { return }
         queue.async {
@@ -36,7 +37,7 @@ public class AUSAPI {
 
     private func getDocument(for url: URL) throws -> Document {
         let data = try Data(contentsOf: url)
-        guard let content = String(data: data, encoding: .ascii) else { throw ParsingError.invalidContent }
+        guard let content = String(data: data, encoding: .ascii) else { throw AUSNetworkError.invalidContent }
         return try SwiftSoup.parse(content)
     }
 
@@ -88,8 +89,10 @@ public class AUSAPI {
     }
 }
 
-enum ParsingError: Error {
+public enum AUSNetworkError: Error {
     case invalidContent
+    case invalidURL
+    case parsingError(underlyingError: Error)
 }
 
 public struct ScheduleOptions: OptionSet {
