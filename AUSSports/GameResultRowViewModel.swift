@@ -12,7 +12,7 @@ import SwiftUI
 
 struct GameResultRowViewModel: Identifiable {
     var id: String {
-        return homeTeamName + awayTeamName + homeScore + awayScore
+        homeTeamName + awayTeamName + day + month
     }
 
     var homeScore: String {
@@ -30,27 +30,27 @@ struct GameResultRowViewModel: Identifiable {
     }
 
     var homeTeamName: String {
-        return game.homeTeam.rawValue
+        game.homeTeam.rawValue
     }
 
     var awayTeamName: String {
-        return game.awayTeam.rawValue
+        game.awayTeam.rawValue
     }
 
     var homeLogo: String {
-        return game.homeTeam.logoName
+        game.homeTeam.logoName
     }
 
     var awayLogo: String {
-        return game.awayTeam.logoName
+        game.awayTeam.logoName
     }
 
     var month: String {
-        return monthFormatter.string(from: game.date)
+        monthFormatter.string(from: game.date)
     }
 
     var day: String {
-        return dayFormatter.string(from: game.date)
+        dayFormatter.string(from: game.date)
     }
 
     private var game: GameResult
