@@ -20,6 +20,10 @@ class GameResultViewModel: ObservableObject, Identifiable {
         self.api = api
     }
 
+    func viewDidAppear() {
+        fetch()
+    }
+
     func fetch() {
         api.fetchSchedule()
             // .map { $0.filter { $0.homeTeam == .stfx } }

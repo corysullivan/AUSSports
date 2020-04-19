@@ -19,44 +19,28 @@ struct GameResultView: View {
     }
 
     var body: some View {
-        TabView {
-            Text("The First Tab")
-                .tabItem {
-                    Image(systemName: "1.square.fill")
-                    Text("First")
-                }
-            VStack {
-                Picker(selection: $favorite, label: Text("This is favorite")) {
-                    Text("Red").tag(0)
-                    Text("Green").tag(1)
-                    Text("Yellow").tag(2)
-                }.pickerStyle(SegmentedPickerStyle())
-                if favorite == 2 {
-                    NavigationView {
-                        List {
-                            if viewModel.dataSource.isEmpty {
-                                emptySection
-                            } else {
-                                resultSection
-                            }
+        VStack {
+            Picker(selection: $favorite, label: Text("This is favorite")) {
+                Text("Red").tag(0)
+                Text("Green").tag(1)
+                Text("Yellow").tag(2)
+            }.pickerStyle(SegmentedPickerStyle())
+            if favorite == 2 {
+                NavigationView {
+                    List {
+                        if viewModel.dataSource.isEmpty {
+                            emptySection
+                        } else {
+                            resultSection
                         }
-                        .listStyle(GroupedListStyle())
-                        .navigationBarTitle("Today")
                     }
-                } else {
-                    Spacer()
+                    .listStyle(GroupedListStyle())
+                    .navigationBarTitle("Today")
                 }
-            }.tabItem {
-                Image(systemName: "2.square.fill")
-                Text("Scores")
-            }.onAppear(perform: viewModel.fetch)
-            Text("The Last Tab")
-                .tabItem {
-                    Image(systemName: "3.square.fill")
-                    Text("Third")
-                }
-        }
-        .font(.headline)
+            } else {
+                Spacer()
+            }
+        }.onAppear(perform: viewModel.viewDidAppear)
     }
 }
 
