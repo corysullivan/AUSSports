@@ -19,3 +19,9 @@ let monthFormatter: DateFormatter = {
     formatter.dateFormat = "MMMM"
     return formatter
 }()
+
+let shortDate: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateStyle = .long
+    return formatter
+}()

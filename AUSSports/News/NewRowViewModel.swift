@@ -20,6 +20,14 @@ struct NewsRowViewModel: Identifiable {
         news.title
     }
 
+    var image: URL? {
+        news.image
+    }
+
+    var date: String {
+        shortDate.string(from: news.date)
+    }
+
     init(news: News) {
         self.news = news
     }
