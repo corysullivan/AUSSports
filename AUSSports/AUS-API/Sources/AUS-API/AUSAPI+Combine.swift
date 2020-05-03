@@ -9,10 +9,10 @@ import Combine
 import Foundation
 
 extension AUSAPI {
-    public func fetchSchedule(with options: ScheduleOptions = .stfx) -> AnyPublisher<[GameResult], Error> {
+    public func fetchSchedule(with endPoint: Endpoint) -> AnyPublisher<[GameResult], Error> {
         Deferred {
             Future<[GameResult], Error> { promise in
-                self.fetchSchedule(with: options) { result in
+                self.fetchSchedule(for: endPoint) { result in
                     switch result {
                     case let .success(gameResults):
                         return promise(.success(gameResults))

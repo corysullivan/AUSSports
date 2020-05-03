@@ -10,11 +10,13 @@ import Foundation
 import KingfisherSwiftUI
 import SwiftUI
 
-struct NewsRowView: View {
+struct NewsRowView<Destination: View>: View {
     private let viewModel: NewsRowViewModel
+    private let destination: (NewsRowViewModel) -> Destination
 
-    init(viewModel: NewsRowViewModel) {
+    init(viewModel: NewsRowViewModel, destination: @escaping (NewsRowViewModel) -> Destination) {
         self.viewModel = viewModel
+        self.destination = destination
     }
 
     var body: some View {

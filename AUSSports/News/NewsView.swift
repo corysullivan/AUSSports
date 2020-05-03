@@ -10,24 +10,27 @@ import Foundation
 import SwiftUI
 
 struct NewsView: View {
-    @ObservedObject var viewModel: NewsViewModel
+    @ObservedObject private var viewModel: NewsViewModel
+    @State private var isPresenting: Bool = false
+    @State private var newsLink: URL?
 
     init(viewModel: NewsViewModel) {
         self.viewModel = viewModel
     }
 
     var body: some View {
-        NavigationView {
-            List {
-                if viewModel.dataSource.isEmpty {
-                    emptySection
-                } else {
-                    resultSection
-                }
+        List {
+            if viewModel.dataSource.isEmpty {
+                emptySection
+            } else {
+                resultSection
             }
-            .listStyle(GroupedListStyle())
-            .navigationBarTitle("News")
-        }.onAppear(perform: viewModel.viewDidAppear)
+        }
+        .listStyle(GroupedListStyle())
+        .onAppear(perform: viewModel.viewDidAppear)
+        .sheet(isPresented: $isPresenting) {
+            SafariView(url: self.newsLink!)
+        }
     }
 }
 
@@ -37,8 +40,13 @@ private extension NewsView {
     }
 
     var resultSection: some View {
-        Section {
-            ForEach(viewModel.dataSource, content: NewsRowView.init(viewModel:))
+        ForEach(viewModel.dataSource) { viewModel in
+            NewsRowView(viewModel: viewModel) { viewModel in
+                SafariView(url: viewModel.link)
+            }.onTapGesture {
+                self.newsLink = viewModel.link
+                self.isPresenting = true
+            }
         }
     }
 }

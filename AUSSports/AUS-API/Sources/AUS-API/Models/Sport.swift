@@ -39,4 +39,13 @@ extension Sport {
             return URL(string: "https://aus.prestosports.com/sports/wsoc/headlines-featured?feed=rss_2.0")
         }
     }
+
+    var schedulePath: String {
+        switch self {
+        case .basketballMens:
+            return "/sports/mbkb/2019-20/schedule"
+        default:
+            fatalError()
+        }
+    }
 }

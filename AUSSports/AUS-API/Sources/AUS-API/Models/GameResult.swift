@@ -7,6 +7,7 @@ public struct GameResult {
     public let homeScore: Int?
     public let awayScore: Int?
     public let status: GameStatus
+    public let links: [GameLink]
 }
 
 public enum GameStatus {
@@ -23,5 +24,12 @@ public extension GameResult {
         homeScore = withScore ? 20 : nil
         date = Date()
         status = .final
+        links = []
     }
+}
+
+public enum GameLink {
+    case boxScore(URL)
+    case video(URL)
+    case recap(URL)
 }

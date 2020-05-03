@@ -28,6 +28,10 @@ struct NewsRowViewModel: Identifiable {
         shortDate.string(from: news.date)
     }
 
+    var link: URL {
+        news.link
+    }
+
     init(news: News) {
         self.news = news
     }

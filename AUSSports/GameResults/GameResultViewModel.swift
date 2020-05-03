@@ -25,7 +25,7 @@ class GameResultViewModel: ObservableObject, Identifiable {
     }
 
     func fetch() {
-        api.fetchSchedule()
+        api.fetchSchedule(with: .schedule(for: .basketballMens))
             // .map { $0.filter { $0.homeTeam == .stfx } }
             .map { $0.map(GameResultRowViewModel.init) }
             .receive(on: DispatchQueue.main)

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34221AB424536F140024D13C /* SafariController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34221AB324536F140024D13C /* SafariController.swift */; };
+		34221AB6245374450024D13C /* TestModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34221AB5245374450024D13C /* TestModalView.swift */; };
 		3431397524423DEC00FAA7CF /* GameResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3431397424423DEC00FAA7CF /* GameResultViewModel.swift */; };
 		343139772442424200FAA7CF /* GameResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343139762442424200FAA7CF /* GameResultView.swift */; };
 		343139792442559200FAA7CF /* GameResultRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343139782442559200FAA7CF /* GameResultRowViewModel.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34221AB324536F140024D13C /* SafariController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariController.swift; sourceTree = "<group>"; };
+		34221AB5245374450024D13C /* TestModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModalView.swift; sourceTree = "<group>"; };
 		3431397424423DEC00FAA7CF /* GameResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultViewModel.swift; sourceTree = "<group>"; };
 		343139762442424200FAA7CF /* GameResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultView.swift; sourceTree = "<group>"; };
 		343139782442559200FAA7CF /* GameResultRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultRowViewModel.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				348128B9244C995100EBEF57 /* GameResults */,
 				348128B8244C993F00EBEF57 /* News */,
 				3499B9232440DD270013E349 /* AppDelegate.swift */,
+				34221AB324536F140024D13C /* SafariController.swift */,
+				34221AB5245374450024D13C /* TestModalView.swift */,
 				3499B9252440DD270013E349 /* SceneDelegate.swift */,
 				3431397A2442591600FAA7CF /* Formatters.swift */,
 				3499B9292440DD290013E349 /* Assets.xcassets */,
@@ -234,6 +240,7 @@
 			files = (
 				343139792442559200FAA7CF /* GameResultRowViewModel.swift in Sources */,
 				348128C1244CA48600EBEF57 /* MainView.swift in Sources */,
+				34221AB6245374450024D13C /* TestModalView.swift in Sources */,
 				348128BB244C998B00EBEF57 /* NewsViewModel.swift in Sources */,
 				348128BD244C9AAF00EBEF57 /* NewRowViewModel.swift in Sources */,
 				348128B7244C986900EBEF57 /* NewsView.swift in Sources */,
@@ -244,6 +251,7 @@
 				3499B9262440DD270013E349 /* SceneDelegate.swift in Sources */,
 				348128BF244C9BCD00EBEF57 /* NewsRowView.swift in Sources */,
 				3431397B2442591600FAA7CF /* Formatters.swift in Sources */,
+				34221AB424536F140024D13C /* SafariController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
