@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		341F1010245F1C1E009D6A40 /* SolbitsAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 341F100F245F1C1E009D6A40 /* SolbitsAPI */; };
 		34221AB424536F140024D13C /* SafariController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34221AB324536F140024D13C /* SafariController.swift */; };
 		34221AB6245374450024D13C /* TestModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34221AB5245374450024D13C /* TestModalView.swift */; };
 		3431397524423DEC00FAA7CF /* GameResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3431397424423DEC00FAA7CF /* GameResultViewModel.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		341F100E245F1261009D6A40 /* SolbitsAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SolbitsAPI; sourceTree = "<group>"; };
 		34221AB324536F140024D13C /* SafariController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariController.swift; sourceTree = "<group>"; };
 		34221AB5245374450024D13C /* TestModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModalView.swift; sourceTree = "<group>"; };
 		3431397424423DEC00FAA7CF /* GameResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultViewModel.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				348E561E244FB50F00F186E7 /* KingfisherSwiftUI in Frameworks */,
+				341F1010245F1C1E009D6A40 /* SolbitsAPI in Frameworks */,
 				34946A67244B8DE800DAB291 /* AUS-API in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +109,7 @@
 		3499B9222440DD270013E349 /* AUSSports */ = {
 			isa = PBXGroup;
 			children = (
+				341F100E245F1261009D6A40 /* SolbitsAPI */,
 				34946A65244B8DA000DAB291 /* AUS-API */,
 				348128B9244C995100EBEF57 /* GameResults */,
 				348128B8244C993F00EBEF57 /* News */,
@@ -158,6 +162,7 @@
 			packageProductDependencies = (
 				34946A66244B8DE800DAB291 /* AUS-API */,
 				348E561D244FB50F00F186E7 /* KingfisherSwiftUI */,
+				341F100F245F1C1E009D6A40 /* SolbitsAPI */,
 			);
 			productName = AUSSports;
 			productReference = 3499B9202440DD270013E349 /* AUSSports.app */;
@@ -458,6 +463,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		341F100F245F1C1E009D6A40 /* SolbitsAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SolbitsAPI;
+		};
 		348E561D244FB50F00F186E7 /* KingfisherSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 348E561C244FB50F00F186E7 /* XCRemoteSwiftPackageReference "Kingfisher" */;

@@ -9,6 +9,7 @@
 import AUS_API
 import Combine
 import Foundation
+import SolbitsAPI
 
 class NewsViewModel: ObservableObject, Identifiable {
     private let api: AUSAPI
@@ -42,6 +43,6 @@ class NewsViewModel: ObservableObject, Identifiable {
                 }
             }) { result in
                 self.dataSource = result
-            }.store(in: &disposables)
+            }.store(in: &disposables)        
     }
 }
